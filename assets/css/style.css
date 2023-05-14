@@ -1,0 +1,117 @@
+
+/* hand-written style &  water brush style */
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Water+Brush&display=swap');
+
+
+/* font-family: 'Delicious Handrawn', cursive;
+font-family: 'Water Brush', cursive; */
+
+
+/* color scheme */
+
+
+:root {
+    /* background colors */
+        --header-bkg-color:#F5F5F5;    
+        --bkg-color:#FFFFFF;
+    
+    /* text and headings*/    
+        
+        --heading-logo:#1181B2;
+        
+        --heading-cards:#3a3a3a;
+
+        --text-color1:orangered;
+        
+        
+        --card-text:
+    
+    /* link and hover */
+    
+    /* cards and sections */
+    
+    
+    /* buttons */    
+    
+    
+    /* other componetes */
+    
+        
+}
+
+
+
+
+/* global styles */
+*,*::before, *::after {
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0;
+    padding:0;
+    scroll-behavior: smooth;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top:7rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: orange;
+}
+
+
+
+
+
+
+
+/* main layout */
+
+header {
+padding:3rem 9%;
+
+}
+
+
+
+main {
+
+}
+
+
+aside {
+
+}
+
+footer {
+
+}
+
+
+/* typograph */
+
+h1 {
+    text-align: center;
+    color: var();
+
+    font-family: 'Water Brush', cursive;
+    
+
+}
+
+p {
+
+}
