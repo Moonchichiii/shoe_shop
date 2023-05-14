@@ -14,6 +14,7 @@ font-family: 'Water Brush', cursive; */
     /* background colors */
         --header-bkg-color:#F5F5F5;    
         --bkg-color:#FFFFFF;
+        --cards-bkg:#F5F5F5;
     
     /* text and headings*/    
         
@@ -84,7 +85,7 @@ html::-webkit-scrollbar-thumb {
 
 header {
     background-color: var(--header-bkg-color);
-    padding:1rem 5%;
+    padding: 0.5rem 2%;
 }
 
 
@@ -104,6 +105,48 @@ footer {
 }
 
 
+
+
+/* inside "main" display cards  */
+.display-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5%;
+    margin-top: 2%;
+}
+
+.display-cards > div {
+    width: 20rem;
+    height: 25rem;
+    background-color: var(--cards-bkg) ;
+    margin: 1rem;
+    border-radius: 4%;
+    padding: 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.display-1 {
+    animation-delay: 1s;
+}
+
+.display-2 {
+    animation-delay: 2s;
+}
+
+.display-3 {
+    animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
 /* typograph */
 
 h1 {
@@ -115,6 +158,7 @@ h1 {
 .logo-header {
     font-size:4rem;
     text-align: center;
+    padding-left: 5px;
 
 }
     
@@ -124,24 +168,11 @@ p {
 
 /* navigation */
 
-
-.navbar {
-    container-type: inline-size;
-    container-name: navbar;
-}
-
-@container navbar (min-width:667px) {
-    .navbar {
-        display:flex;
-        flex-direction:coloumn;
-        flex-wrap:wrap;
-    }
-}
-
-nav {
+nav ul {
     display: flex;
-    margin-right: 2rem;
-    
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
 }
  
 nav ul li {
@@ -169,12 +200,32 @@ nav a:hover {
 
 #logo-hover:hover {
     color: var(--link-hover);
-    transform: scale(1.2);
+    transform: scale(1.1);
     text-decoration: none;   
 }
 
-/* componetes */
 
+/* shopping navigation */
+.shopping-checkout {
+    margin-left: auto; 
+}
+
+
+.fa-cart-shopping,
+.fa-credit-card {
+    font-size:1.4rem;
+    
+}
+
+.fa-cart-shopping:hover,
+.fa-credit-card:hover {
+    color: var(--link-hover);
+    transform: scale(1.2);
+    transition: color 0.4s ease;
+}
+
+/* componetes */
+/* keyframes animations */
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -187,3 +238,44 @@ nav a:hover {
 header {
     animation: fade-in 2s ease-in-out;
 }
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fa-cart-shopping {
+    animation: fade-in 3s ease-in-out;
+}
+.fa-credit-card {
+    animation: fade-in 3s ease-in-out;
+}
+
+
+    /* Responsive styles */
+@media only screen and (max-width: 600px) {
+        .display-cards {
+            flex-direction: column;
+            }
+        .display-cards > div {
+            width: 100%; 
+            height: auto; 
+            margin: 0.5rem 0; 
+        }
+
+        nav ul {
+            flex-direction: column; 
+        }
+
+        nav ul li {
+            margin: 0.5rem 0; 
+        }
+
+        .logo-header {
+            font-size: 2.5rem; 
+        }
+    }
