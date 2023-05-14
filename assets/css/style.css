@@ -81,6 +81,7 @@ html::-webkit-scrollbar-thumb {
 /* main layout */
 
 header {
+    background-color: var(--header-bkg-color);
 padding:3rem 9%;
 
 }
@@ -115,3 +116,30 @@ h1 {
 p {
 
 }
+
+/* navigation */
+
+nav {
+    display: flex;
+    margin-right: 2rem;
+    
+}
+ 
+nav ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+   
+}
+ 
+nav a {
+    display: block;
+    padding:10px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #A0AECD;
+    transition: color 0.2s ease;
+    
+}  
+
+/* componetes */
+
