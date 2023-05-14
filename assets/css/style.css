@@ -84,9 +84,9 @@ html::-webkit-scrollbar-thumb {
 
 header {
     background-color: var(--header-bkg-color);
-    padding:3rem 5%;
-
+    padding:1rem 5%;
 }
+
 
 
 
@@ -123,6 +123,20 @@ p {
 }
 
 /* navigation */
+
+
+.navbar {
+    container-type: inline-size;
+    container-name: navbar;
+}
+
+@container navbar (min-width:667px) {
+    .navbar {
+        display:flex;
+        flex-direction:coloumn;
+        flex-wrap:wrap;
+    }
+}
 
 nav {
     display: flex;
@@ -161,3 +175,15 @@ nav a:hover {
 
 /* componetes */
 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+header {
+    animation: fade-in 2s ease-in-out;
+}
