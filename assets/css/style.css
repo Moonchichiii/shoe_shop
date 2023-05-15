@@ -15,6 +15,7 @@ font-family: 'Water Brush', cursive; */
         --header-bkg-color:#F5F5F5;    
         --bkg-color:#FFFFFF;
         --cards-bkg:#F5F5F5;
+        --footer-bkg:#F5F5F5;
     
     /* text and headings*/    
         
@@ -59,7 +60,7 @@ body {
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
-    scroll-padding-top:7rem;
+    scroll-padding-top:3rem;
 }
 
 html::-webkit-scrollbar-track{
@@ -86,13 +87,16 @@ html::-webkit-scrollbar-thumb {
 header {
     background-color: var(--header-bkg-color);
     padding: 0.5rem 2%;
+    height: auto;
 }
 
 
 
 
 main {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 
@@ -101,7 +105,11 @@ aside {
 }
 
 footer {
-
+    width: 100%;
+    height: 5rem;
+    bottom: 0;
+    left:0;
+    background-color: var(--footer-bkg);
 }
 
 /* top hero image  */
