@@ -104,7 +104,13 @@ footer {
 
 }
 
+/* top hero image  */
 
+.hero-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /* inside "main" display cards  */
