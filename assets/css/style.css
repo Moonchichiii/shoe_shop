@@ -100,9 +100,6 @@ main {
 }
 
 
-aside {
-
-}
 
 footer {
     width: 100%;
@@ -229,6 +226,10 @@ nav a:hover {
     transform: scale(1.1);
     text-decoration: none;   
 }
+#hidden {
+    display: none;
+}
+
 
 
 /* mouse tracker*/
@@ -291,25 +292,86 @@ header {
 
 
     /* Responsive styles */
-@media only screen and (max-width: 600px) {
-        .display-cards {
-            flex-direction: column;
-            }
-        .display-cards > div {
-            width: 100%; 
-            height: auto; 
-            margin: 0.5rem 0; 
-        }
-
-        nav ul {
-            flex-direction: column; 
-        }
-
-        nav ul li {
-            margin: 0.5rem 0; 
-        }
-
-        .logo-header {
-            font-size: 2.5rem; 
-        }
+@media only screen and (max-width: 768px) {
+    /* Hide navigation on small screens */
+    #main-nav {
+        display: none;
     }
+    
+    /* Adjust header logo font size */
+    .logo-header {
+        font-size: 2.5rem; 
+    }
+    
+    /* Adjust dropdown layout */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Adjust shopping checkout layout */
+    .shopping-checkout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Style dropdown button */
+    .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+      
+    /* Style dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+      
+    /* Style dropdown links */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+      
+    /* Change link background on hover */
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+      
+    /* Show dropdown content on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+      
+    /* Change button background on hover */
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+    
+    /* Adjust card display layout */
+    .display-cards {
+        flex-direction: column;
+    }
+    
+    /* Adjust individual card styles */
+    .display-cards > div {
+        width: 100%; 
+        height: auto; 
+        margin: 0.5rem 0; 
+    }
+}
