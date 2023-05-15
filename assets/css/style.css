@@ -290,10 +290,27 @@ header {
     animation: fade-in 3s ease-in-out;
 }
 
-
+@media (min-width: 768px) {
+    #hidden {
+        display: none;
+    }
+}
     /* Responsive styles */
-@media only screen and (max-width: 768px) {
+    
     /* Hide navigation on small screens */
+@media (max-width: 767px) {
+        #hidden {
+            display: block;
+        }
+   .head-big-screen menu {
+    display: none;
+   }   
+    
+    #logo-hover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #main-nav {
         display: none;
     }
