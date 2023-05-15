@@ -106,15 +106,20 @@ footer {
 
 /* top hero image  */
 
-.hero-top {
+#shoes-basket {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30%;
+    margin-right: auto;
+    margin-left: auto;
     width: 100%;
-    height: 30vh;
+    height: 16vh;
+    z-index: 1;
 }
 
-.hero-top img {
+#shoes-basket,
+ img {
     max-width: 100%;
     height: auto;
 }
@@ -217,6 +222,14 @@ nav a:hover {
     text-decoration: none;   
 }
 
+
+/* mouse tracker*/
+
+
+#follower {
+    position:absolute;
+    z-index: 1000;
+}
 
 /* shopping navigation */
 .shopping-checkout {
