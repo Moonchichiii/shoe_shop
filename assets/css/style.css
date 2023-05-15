@@ -47,20 +47,21 @@ font-family: 'Water Brush', cursive; */
 
 
 /* global styles */
-*,*::before, *::after {
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding:0;
+    background-color: white;
     scroll-behavior: smooth;
 }
 
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
-    scroll-padding-top:3rem;
+    scroll-padding-top:2rem;
 }
 
 html::-webkit-scrollbar-track{
@@ -75,12 +76,6 @@ html::-webkit-scrollbar{
 html::-webkit-scrollbar-thumb {
     background-color: orange;
 }
-
-
-
-
-
-
 
 /* main layout */
 
@@ -186,7 +181,8 @@ h1 {
 }
     
 p {
-
+font-size: 1rem;
+color: var(--heading-logo);
 }
 
 /* navigation */
@@ -260,6 +256,11 @@ nav a:hover {
 }
 
 /* componetes */
+
+
+
+
+
 /* keyframes animations */
 @keyframes fade-in {
     0% {
@@ -294,25 +295,34 @@ header {
     #hidden {
         display: none;
     }
+.main-nav,
+.head-big-screen {
+    display: none;
+}
+
 }
     /* Responsive styles */
     
     /* Hide navigation on small screens */
-@media (max-width: 767px) {
+    
+    @media (max-width: 767px) {
         #hidden {
             display: block;
         }
-   .head-big-screen menu {
+
+        .header-nav{
+            display: none;
+        }  
+#main-nav {
     display: none;
-   }   
+} 
+        
     
+        
     #logo-hover {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    #main-nav {
-        display: none;
     }
     
     /* Adjust header logo font size */
