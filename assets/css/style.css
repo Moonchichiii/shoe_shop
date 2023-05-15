@@ -110,6 +110,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 30vh;
+}
+
+.hero-top img {
+    max-width: 100%;
+    height: auto;
 }
 
 
