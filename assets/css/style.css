@@ -333,9 +333,7 @@ header {
     justify-content: center;
     align-items: center;
     gap:5%;
-    margin-top: 25%;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 5% auto 10%;
 }
 
 .display-cards > div {
