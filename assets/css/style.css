@@ -14,6 +14,8 @@
     --text-color1:#5EBEC4;
     --link-color:#A0AECD;
     --link-hover:#EA445A;
+    --arrow-color:#D6A3FB;
+    --arrow-hover:#F92C85;
 }
 
 /* global styles */
@@ -200,6 +202,7 @@ header {
     position: absolute; 
     top: 50%; 
     transform: translateY(-50%); 
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,12 +215,14 @@ header {
     cursor: pointer;
     text-align: center;
     line-height: 1.4;
-    color:var(--link-hover);
-
+    color:var(--arrow-color);
 }
+.wrapper i:hover {
+    color: var(--arrow-hover);
+} 
 
 .wrapper i:first-child {
-    right:1%;
+    right:2%;
 }
 
 
@@ -233,7 +238,8 @@ header {
     width: 20vw;
     height: 30vh;
     object-fit: cover;
-    gap: 1%;
+    margin-left: 1%;
+    /*gap: 1%;*/
     width:calc(100% / 3);
 }
 .slider img:first-child {

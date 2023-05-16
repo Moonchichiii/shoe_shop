@@ -1,7 +1,18 @@
-const slider = document.querySelector(".slider");
+const slider = document.querySelector(".slider"),
+firstImg =  slider.querySelectorAll("img")[0];
+const arrowIcons = document.querySelectorAll(".wrapper i");
 
-let isDragStart = false;
-let prevPageX, prevScrollLeft;
+let isDragStart = false,prevPageX, prevScrollLeft;
+let firstImgWidth = firstImg.clientWidth + 1; // getting first img width & adding 1 margin value
+
+
+
+arrowIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+        // if clicke icon is left,reduce width from the slider scroll left else add to it.
+        slider.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+    });
+});
 
 const dragStart = (e) => {
     // updating global variables value on mouse down event
