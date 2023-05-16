@@ -69,8 +69,19 @@ header {
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    
 }
 
 footer {
@@ -177,13 +188,81 @@ header {
 }
 
 
+
+/* hero slider */
+
+.wrapper {
+    max-width: 95%;
+    padding: 0 2%;
+    position: relative;
+}
+.wrapper i {
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: transparent;
+    width: 3rem;
+    height: 3rem;
+    font-size: x-large;
+    
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.4;
+    color:var(--link-hover);
+
+}
+
+.wrapper i:first-child {
+    right:1%;
+}
+
+
+
+.wrapper .slider {
+    font-size: 0;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.slider img {
+    width: 20vw;
+    height: 30vh;
+    object-fit: cover;
+    gap: 1%;
+    width:calc(100% / 3);
+}
+.slider img:first-child {
+    margin-left: 0%;
+}
+
+@media screen and (max-width: 900px) {
+    .slider img {
+        width:calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .slider img {
+        width: 100%;
+    }
+}
+
+
+
+
+
 /* images inside the cards  */
 
 #images-insde-the-cards {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30%;
+    margin-top: auto;
     margin-right: auto;
     margin-left: auto;
     width: 100%;
@@ -203,7 +282,7 @@ header {
     justify-content: center;
     align-items: center;
     gap:5%;
-    margin-top: 2%;
+    margin-top: 25%;
     margin-right: auto;
     margin-left: auto;
 }
