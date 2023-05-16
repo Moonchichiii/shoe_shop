@@ -25,7 +25,7 @@
     
     
     /* link and hover */
-
+    --link-color:#A0AECD;
     --link-hover:#EA445A;
     
     /* cards and sections */
@@ -129,14 +129,67 @@ main {
 
 footer {
     position: fixed;
+    margin-top: 5%;
     width: 100%;
-    height: 5rem;
+    height: 3rem;
     bottom: 0;
    
     background-color: var(--footer-bkg);
 }
 
-/* top hero image  */
+/* navigation */
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav a {
+    display: block;
+    padding:10px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.4s ease;    
+}  
+nav a:hover {
+    color: var(--link-hover);
+    transform: scale(1.2);
+    text-decoration: underline;
+}
+
+#logo-hover:hover {
+    color: var(--link-hover);
+    transform: scale(1.1);
+    text-decoration: none;   
+}
+
+.nav-part2 {
+    margin-right: 45%;
+}
+
+#hidden {
+    display: none;
+}
+
+
+
+/* images inside the cards  */
 
 #shoes-basket {
     display: flex;
@@ -176,7 +229,7 @@ footer {
     margin-left: auto;
     border-radius: 4%;
     padding: 2%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     opacity: 0;
     animation: fadeIn 2s forwards;
 
@@ -207,60 +260,8 @@ footer {
 
 
 
-/* navigation */
 
-
-
-nav {
-    display: flex;
-    justify-content: space-between;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 0.5rem;
-    list-style: none;
-    text-decoration: none;
-}
-
-nav a {
-    display: block;
-    padding:10px;
-    font-size: 1.3rem;
-    text-decoration: none;
-    color: #A0AECD;
-    transition: color 0.4s ease;    
-}  
-nav a:hover {
-    color: var(--link-hover);
-    transform: scale(1.2);
-    text-decoration: underline;
-}
-
-#logo-hover:hover {
-    color: var(--link-hover);
-    transform: scale(1.1);
-    text-decoration: none;   
-}
-
-.nav-part2 {
-    margin-right: 45%;
-}
-
-#hidden {
-    display: none;
-}
-
-
-
-/* mouse tracker*/
+/* mouse tracker shoe */
 
 
 #follower {
@@ -321,11 +322,9 @@ header {
 
 /* componetes */
 
-/* hamburger drop down */
-.fa-sharp,
-.fa-light,
-.fa-bars {
-    font-size: 1.5rem;
+.social > i {
+    font-size: 1rem;
+    color: var();
 }
 
 
@@ -382,10 +381,10 @@ header {
 /* Style dropdown button */
 
     
-.dropbtn {
+    .dropbtn {
         font-size: 1.5rem;
         cursor: pointer;
-        color:var(--heading-logo);
+        color:var(--link);
     }
       
 /* Style dropdown content (hidden by default) */
@@ -394,8 +393,9 @@ header {
         position: relative;
         margin-top: 1%;
         background-color: var(--header-bkg-color);
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        max-width: auto;
+        overflow: hidden;
+        text-align: center;
         z-index: 1;
     }
       
@@ -409,7 +409,7 @@ header {
       
 /* Change link background on hover */
     .dropdown-content a:hover {
-        background-color: #f1f1f1;
+        background-color: var(--header-bkg-color);
     }
       
 /* Show dropdown content on hover */
@@ -429,7 +429,7 @@ header {
     
 /* Adjust individual card styles */
     .display-cards > div {
-        width: 100%; 
+        width: 96%; 
         height: auto; 
         margin: 0.5rem 0; 
     }
