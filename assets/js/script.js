@@ -10,7 +10,7 @@ let firstImgWidth = firstImg.clientWidth + 2; // getting first img width & addin
 arrowIcons.forEach(icon => {
     icon.addEventListener('click', () => {
         // if clicke icon is left,reduce width from the slider scroll left else add to it.
-        slider.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+        slider.scrollLeft += icon.id == "right" ? -firstImgWidth : firstImgWidth;
     });
 });
 
