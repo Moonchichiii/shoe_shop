@@ -2,6 +2,8 @@
 /* hand-written style &  water brush style */
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Water+Brush&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Ubuntu:wght@300&display=swap');
+
 
 /* color scheme */
 :root {
@@ -52,11 +54,18 @@ body {
     scroll-behavior: smooth;
 }
 
+
+
+/*
+
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top:2rem;
 }
+
+
+
 
 html::-webkit-scrollbar-track{
     background: transparent;
@@ -69,9 +78,37 @@ html::-webkit-scrollbar{
 
 html::-webkit-scrollbar-thumb {
     background-color: orange;
+}*/
+
+
+/* typograph */
+
+h1 {
+    text-align: center;
+    font-family: 'Water Brush', cursive;
 }
 
+h2 h3 {
+    font-size:2rem;
+    color: var(--heading-logo);
+        
+}
+.logo-header {
+    font-size:4rem;
+    text-align: center;
+    padding-left: 5px;
+
+}
+    
+p {
+font-size: 1rem;
+font-family: 'Ubuntu', sans-serif;
+}
+
+
+
 /* main layout */
+
 
 header {
     background-color: var(--header-bkg-color);
@@ -91,10 +128,11 @@ main {
 
 
 footer {
+    position: fixed;
     width: 100%;
     height: 5rem;
     bottom: 0;
-    left:0;
+   
     background-color: var(--footer-bkg);
 }
 
@@ -126,18 +164,27 @@ footer {
     align-items: center;
     gap:5%;
     margin-top: 2%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .display-cards > div {
     width: 20rem;
     height: 25rem;
     background-color: var(--cards-bkg) ;
-    margin: 1rem;
+    margin-right: auto;
+    margin-left: auto;
     border-radius: 4%;
     padding: 2%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     opacity: 0;
     animation: fadeIn 2s forwards;
+
+
+    text-align: center;
+    text-overflow: ellipsis;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .display-1 {
@@ -159,26 +206,6 @@ footer {
 }
 
 
-/* typograph */
-
-h1 {
-    text-align: center;
-    color: var();
-    font-family: 'Water Brush', cursive;
-}
-
-.logo-header {
-    font-size:4rem;
-    text-align: center;
-    padding-left: 5px;
-
-}
-    
-.p2 {
-font-size: 1rem;
-color: var(--heading-logo);
-font-family: 'Delicious Handrawn', cursive;
-}
 
 /* navigation */
 
@@ -231,32 +258,10 @@ nav a:hover {
     z-index: 1000;
 }
 
-/* shopping navigation */
-.shopping-checkout {
-    margin-left: auto; 
-}
-
-
-.fa-cart-shopping,
-.fa-credit-card {
-    font-size:1.4rem;
-    
-}
-
-.fa-cart-shopping:hover,
-.fa-credit-card:hover {
-    color: var(--link-hover);
-    transform: scale(1.2);
-    transition: color 0.4s ease;
-}
-
-/* componetes */
 
 
 
-
-
-/* keyframes animations */
+/* * shopping navigation keyframes animations */
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -286,41 +291,54 @@ header {
     animation: fade-in 3s ease-in-out;
 }
 
-@media (min-width: 768px) {
-    #hidden {
-        display: none;
-    }
-.main-nav,
-.head-big-screen {
-    display: none;
+.shopping-checkout {
+    margin-left: auto; 
 }
 
+
+.fa-cart-shopping,
+.fa-credit-card {
+    font-size:1.4rem;
+    
 }
-    /* Responsive styles */
-    
-    /* Hide navigation on small screens */
-    
-    @media (max-width: 767px) {
-        #hidden {
-            display: block;
+
+.fa-cart-shopping:hover,
+.fa-credit-card:hover {
+    color: var(--link-hover);
+    transform: scale(1.2);
+    transition: color 0.4s ease;
+}
+
+/* componetes */
+
+
+
+
+   
+/* @ media qurries for smaller screens  */
+   
+@media (max-width: 767px) {
+    #hidden {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .header-nav{
+   .navbar{
             display: none;
         }  
-#main-nav {
+
+    .navbar {
     display: none;
 } 
-        
-    
-        
     #logo-hover {
         display: flex;
         justify-content: center;
         align-items: center;
     }
     
-    /* Adjust header logo font size */
+/* Adjust header logo font size */
     .logo-header {
         font-size: 2.5rem; 
     }
@@ -334,7 +352,7 @@ header {
         align-items: center;
     }
     
-    /* Adjust shopping checkout layout */
+/* Adjust shopping checkout layout */
     .shopping-checkout {
         display: flex;
         flex-direction: column;
@@ -342,7 +360,7 @@ header {
         align-items: center;
     }
     
-    /* Style dropdown button */
+/* Style dropdown button */
     .dropbtn {
         background-color: #4CAF50;
         color: white;
@@ -352,7 +370,7 @@ header {
         cursor: pointer;
     }
       
-    /* Style dropdown content (hidden by default) */
+/* Style dropdown content (hidden by default) */
     .dropdown-content {
         display: none;
         position: absolute;
@@ -362,7 +380,7 @@ header {
         z-index: 1;
     }
       
-    /* Style dropdown links */
+/* Style dropdown links */
     .dropdown-content a {
         color: black;
         padding: 12px 16px;
@@ -370,27 +388,27 @@ header {
         display: block;
     }
       
-    /* Change link background on hover */
+/* Change link background on hover */
     .dropdown-content a:hover {
         background-color: #f1f1f1;
     }
       
-    /* Show dropdown content on hover */
+/* Show dropdown content on hover */
     .dropdown:hover .dropdown-content {
         display: block;
     }
       
-    /* Change button background on hover */
+/* Change button background on hover */
     .dropdown:hover .dropbtn {
         background-color: #3e8e41;
     }
     
-    /* Adjust card display layout */
+/* Adjust card display layout */
     .display-cards {
         flex-direction: column;
     }
     
-    /* Adjust individual card styles */
+/* Adjust individual card styles */
     .display-cards > div {
         width: 100%; 
         height: auto; 
