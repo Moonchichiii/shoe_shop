@@ -243,7 +243,8 @@ header {
 .slider,
 .dragging,
  img  {
-    pointer-events: none;
+    /*pointer-events: none;*/
+    overflow: hidden;
  }
 
 .slider img {
