@@ -321,6 +321,12 @@ header {
 
 /* componetes */
 
+/* hamburger drop down */
+.fa-sharp,
+.fa-light,
+.fa-bars {
+    font-size: 1.5rem;
+}
 
 
 
@@ -374,7 +380,9 @@ header {
     }
     
 /* Style dropdown button */
-    .dropbtn {
+
+    
+.dropbtn {
         font-size: 1.5rem;
         cursor: pointer;
         color:var(--heading-logo);
@@ -383,8 +391,9 @@ header {
 /* Style dropdown content (hidden by default) */
     .dropdown-content {
         display: none;
-        position: absolute;
-        background-color: #f9f9;
+        position: relative;
+        margin-top: 1%;
+        background-color: var(--header-bkg-color);
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
@@ -410,7 +419,7 @@ header {
       
 /* Change button background on hover */
     .dropdown:hover .dropbtn {
-        background-color: #3e8e41;
+        background-color: var(--link-hover);
     }
     
 /* Adjust card display layout */
