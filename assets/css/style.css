@@ -32,33 +32,7 @@ body {
 }
 
 
-
-/*
-
-html {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    scroll-padding-top:2rem;
-}
-
-
-
-
-html::-webkit-scrollbar-track{
-    background: transparent;
-}
-
-html::-webkit-scrollbar{
-    width: 1rem;
-
-}
-
-html::-webkit-scrollbar-thumb {
-    background-color: orange;
-}*/
-
-
-/* typograph */
+/* typograph - text elements  */
 
 h1 {
     text-align: center;
@@ -70,11 +44,11 @@ h2 h3 {
     color: var(--heading-logo);
         
 }
+
 .logo-header {
     font-size:4rem;
     text-align: center;
     padding-left: 5px;
-
 }
     
 p {
@@ -93,17 +67,11 @@ header {
     height: auto;
 }
 
-
-
-
 main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
-
-
 
 footer {
     margin-top: auto;
@@ -113,8 +81,6 @@ footer {
 }
 
 /* navigation */
-
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -161,91 +127,6 @@ nav a:hover {
 #hidden {
     display: none;
 }
-
-
-
-/* images inside the cards  */
-
-#shoes-basket {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30%;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-    height: 16vh;
-    z-index: 1;
-}
-
-#shoes-basket,
- img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* inside "main" display cards  */
-.display-cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:5%;
-    margin-top: 2%;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.display-cards > div {
-    width: 20rem;
-    height: 25rem;
-    background-color: var(--cards-bkg) ;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 4%;
-    padding: 2%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-
-
-    text-align: center;
-    text-overflow: ellipsis;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.display-1 {
-    animation-delay: 1s;
-}
-
-.display-2 {
-    animation-delay: 2s;
-}
-
-.display-3 {
-    animation-delay: 3s;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-
-
-
-/* mouse tracker shoe */
-
-
-#follower {
-    position:absolute;
-    z-index: 1000;
-}
-
-
-
 
 /* * shopping navigation keyframes animations */
 @keyframes fade-in {
@@ -294,6 +175,86 @@ header {
     transform: scale(1.2);
     transition: color 0.4s ease;
 }
+
+
+/* images inside the cards  */
+
+#images-insde-the-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    height: 16vh;
+    z-index: 1;
+}
+
+#images-insde-the-cards-to-display-child-below
+ img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* inside "main" display cards  */
+.display-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5%;
+    margin-top: 2%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.display-cards > div {
+    width: 20rem;
+    height: 25rem;
+    background-color: var(--cards-bkg) ;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 4%;
+    padding: 2%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+
+
+    text-align: center;
+    text-overflow: ellipsis;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.display-1 {
+    animation-delay: 1s;
+}
+
+.display-2 {
+    animation-delay: 2s;
+}
+
+.display-3 {
+    animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+/* mouse tracker shoe */
+
+
+#follower {
+    position:absolute;
+    z-index: 1000;
+}
+
+
+
+
 
 /* componetes */
 
@@ -384,7 +345,7 @@ footer > p {
         position: relative;
         margin-top: 1%;
         background-color: var(--header-bkg-color);
-        max-width: auto;
+        max-width: fit-content;
         overflow: hidden;
         text-align: center;
         z-index: 1;
