@@ -3,13 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Water+Brush&display=swap');
 
 
-/* font-family: 'Delicious Handrawn', cursive;
-font-family: 'Water Brush', cursive; */
-
-
 /* color scheme */
-
-
 :root {
     /* background colors */
         --header-bkg-color:#F5F5F5;    
@@ -23,7 +17,7 @@ font-family: 'Water Brush', cursive; */
         
         --heading-cards:#3a3a3a;
 
-        --text-color1:#ff4500;
+        --text-color1:#5EBEC4;
         
         
     
@@ -183,6 +177,7 @@ h1 {
 p {
 font-size: 1rem;
 color: var(--heading-logo);
+font-family: 'Delicious Handrawn', cursive;
 }
 
 /* navigation */
