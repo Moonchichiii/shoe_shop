@@ -3,7 +3,7 @@ firstImg =  slider.querySelectorAll("img")[0];
 const arrowIcons = document.querySelectorAll(".wrapper i");
 
 let isDragStart = false,prevPageX, prevScrollLeft;
-let firstImgWidth = firstImg.clientWidth + 1; // getting first img width & adding 1 margin value
+let firstImgWidth = firstImg.clientWidth + 2; // getting first img width & adding 1 margin value
 
 
 
@@ -25,12 +25,14 @@ const dragging = (e) => {
     // scrolling images/slider to left according to mouse pointer
     if (!isDragStart) return;
     e.preventDefault();
+    slider.classList.add("dragging");
     let positionDiff = e.pageX - prevPageX;
     slider.scrollLeft = prevScrollLeft - positionDiff;
 };
 
 const dragStop = () => {
     isDragStart = false;
+    slider.classList.remove("dragging");
 }
 
 slider.addEventListener("mousedown", dragStart);

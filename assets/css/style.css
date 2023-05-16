@@ -232,7 +232,19 @@ header {
     cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
+    scroll-behavior: smooth;
 }
+
+.slider,
+.dragging {
+    cursor:grab ;
+    scroll-behavior: auto;
+}
+.slider,
+.dragging,
+ img  {
+    pointer-events: none;
+ }
 
 .slider img {
     width: 20vw;
