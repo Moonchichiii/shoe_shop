@@ -209,6 +209,51 @@ footer {
 
 /* navigation */
 
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav a {
+    display: block;
+    padding:10px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #A0AECD;
+    transition: color 0.4s ease;    
+}  
+nav a:hover {
+    color: var(--link-hover);
+    transform: scale(1.2);
+    text-decoration: underline;
+}
+
+#logo-hover:hover {
+    color: var(--link-hover);
+    transform: scale(1.1);
+    text-decoration: none;   
+}
+
+.nav-part2 {
+    margin-right: 45%;
+}
+
 #hidden {
     display: none;
 }
@@ -282,7 +327,23 @@ header {
    
 /* @ media qurries for smaller screens  */
    
+
 @media (max-width: 767px) {
+        nav {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .nav-part1, .nav-part3 {
+            width: 100%;
+            justify-content: center;
+        }
+    
+        .nav-part2 {
+            display: none;
+        }
+    
+    
     #hidden {
             display: flex;
             flex-direction: column;
@@ -290,19 +351,6 @@ header {
             align-items: center;
         }
 
-   .navbar{
-            display: none;
-        }  
-
-    .navbar {
-    display: none;
-} 
-    #logo-hover {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
 /* Adjust header logo font size */
     .logo-header {
         font-size: 2.5rem; 
@@ -327,12 +375,9 @@ header {
     
 /* Style dropdown button */
     .dropbtn {
-        background-color: #4CAF50;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
+        font-size: 1.5rem;
         cursor: pointer;
+        color:var(--heading-logo);
     }
       
 /* Style dropdown content (hidden by default) */
