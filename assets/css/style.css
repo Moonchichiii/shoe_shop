@@ -14,7 +14,7 @@
     --text-color1:#5EBEC4;
     --link-color:#A0AECD;
     --link-hover:#EA445A;
-    --arrow-color:#D6A3FB;
+    --arrow-color:#9c32e7;
     --arrow-hover:#F92C85;
 }
 
@@ -172,6 +172,7 @@ header {
 }
 
 .shopping-checkout {
+    display: flex;
     margin-left: auto; 
 }
 
@@ -263,6 +264,18 @@ header {
     .slider img {
         width:calc(100% / 2);
     }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-part3 {
+        display: flex;
+        align-items: center;
+    }
+    
+    
 }
 
 @media screen and (max-width: 550px) {

@@ -45,6 +45,17 @@ slider.addEventListener("mouseup", dragStop);
 
 
 
+document.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.body.style.opacity = 0;
+        setTimeout(function() {
+            window.location = link.href;
+        }, 1000); // Matches the duration of the transition in the CSS
+    });
+});
+
+
 
 
 
