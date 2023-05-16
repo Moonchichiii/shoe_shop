@@ -1,29 +1,30 @@
 const slider = document.querySelector(".slider");
 
 let isDragStart = false;
+let prevPageX, prevScrollLeft;
 
-const DragStart = () => {
+const dragStart = (e) => {
+    // updating global variables value on mouse down event
     isDragStart = true;
-   
+    prevPageX = e.pageX;
+    prevScrollLeft = slider.scrollLeft;
 }
 
-
 const dragging = (e) => {
-    if(!isDragStart) return;
+    // scrolling images/slider to left according to mouse pointer
+    if (!isDragStart) return;
     e.preventDefault();
-    slider.scrollLeft = e.pageX;
+    let positionDiff = e.pageX - prevPageX;
+    slider.scrollLeft = prevScrollLeft - positionDiff;
 };
 
 const dragStop = () => {
     isDragStart = false;
 }
 
-slider.addEventListener("mousedown", DragStart);
-
+slider.addEventListener("mousedown", dragStart);
 slider.addEventListener("mousemove", dragging);
-
 slider.addEventListener("mouseup", dragStop);
-
 
 
 
