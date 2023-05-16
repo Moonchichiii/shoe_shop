@@ -1,0 +1,3 @@
+mobile landscape is off, the slider is overflowing. 
+and it's not lining up the images in the slide. 
+

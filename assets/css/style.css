@@ -269,7 +269,7 @@ header {
  }
 
 .slider img {
-    width: 20vw;
+    
     height: 30vh;
     object-fit: cover;
     margin-left: 1%;
@@ -408,115 +408,192 @@ footer > p {
 }
 
 
-
    
 /* @ media qurries for smaller screens  */
-   
 
-@media (max-width: 767px) {
-    
-    
-    .nav-part1, .nav-part2, .nav-part3 {
-        justify-content: center;
-        margin: 0; 
+@media screen and (min-width: 882px) and (min-height: 400px) {
+    header {
+        background-color: var(--header-bkg-color);
+        padding: 0.5rem 2%;
+        height: auto;
+        width:100%;
+       
     }
-    nav {
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .nav-part1, .nav-part3 {
-            width: 100%;
-            justify-content: center;
-        }
-    
-        .nav-part2 {
-            display: none;
-        }
-    
-    
-    #hidden {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-/* Adjust header logo font size */
-    .logo-header {
-        font-size: 2.5rem; 
-    }
-    
-    /* Adjust dropdown layout */
-    .dropdown {
-        position: relative;
-        display: inline-block;
+       
+    main {
+        display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        overflow: hidden;
+        margin: auto;
     }
     
-/* Adjust shopping checkout layout */
-    .shopping-checkout {
+    
+    section {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 2%;
+        overflow: hidden;
+        
     }
+.slider img {
+        width: calc(100% / 2);
+        height: 30vh;
+        object-fit: cover;
+        margin: auto;
+        align-items: center;
+        overflow: hidden;
+    }    
+
+footer {
+        margin-top: auto;
+        width: 100%;
+        height: fit-content;
+        background-color: var(--footer-bkg);
+    }
+
+  }
+
+
+@media screen and (min-width:400px) and (max-width: 767px) {
+    
+
+header {
+    background-color: var(--header-bkg-color);
+    padding: 0.5rem 2%;
+    height: auto;
+   
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--footer-bkg);
+}
+    
+.nav-part1,
+.nav-part2,
+.nav-part3 {
+    justify-content: center;
+    margin: 0; 
+}
+nav {
+    flex-direction: column;
+    align-items: center;
+}
+        
+.nav-part1,
+.nav-part3 {
+    width: 100%;
+    justify-content: center;
+}
+    
+.nav-part2 {
+    display: none;
+}
+    
+    
+#hidden {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust header logo font size */
+.logo-header {
+    font-size: 2.5rem; 
+}
+    
+/* Adjust dropdown layout */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+/* Adjust shopping checkout layout */
+.shopping-checkout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
     
 /* Style dropdown button */
-
-    
-    .dropbtn {
-        font-size: 1.5rem;
-        cursor: pointer;
-        color:var(--link-color);
-    }
+.dropbtn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color:var(--link-color);
+}
       
 /* Style dropdown content (hidden by default) */
-    .dropdown-content {
-        display: none;
-        position: relative;
-        margin-top: 1%;
-        background-color: var(--header-bkg-color);
-        max-width: fit-content;
-        overflow: hidden;
-        text-align: center;
-        z-index: 1;
-    }
+.dropdown-content {
+    display: none;
+    position: relative;
+    margin-top: 1%;
+    background-color: var(--header-bkg-color);
+    max-width: fit-content;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+}
       
 /* Style dropdown links */
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
       
 /* Change link background on hover */
-    .dropdown-content a:hover {
-        background-color: var(--header-bkg-color);
-    }
+.dropdown-content a:hover {
+    background-color: var(--header-bkg-color);
+}
       
 /* Show dropdown content on hover */
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
+.dropdown:hover .dropdown-content {
+    display: block;
+}
       
 /* Change button background on hover */
-    .dropdown:hover .dropbtn {
-        background-color: var(--link-hover);
-    }
+.dropdown:hover .dropbtn {
+    background-color: var(--link-hover);
+}
     
 /* Adjust card display layout */
-    .display-cards {
-        flex-direction: column;
-    }
+.display-cards {
+    flex-direction: column;
+}
     
 /* Adjust individual card styles */
-    .display-cards > div {
-        width: 96%; 
-        height: auto; 
-        margin: 0.5rem 0; 
+.display-cards > div {
+    width: 96%; 
+    height: auto; 
+    margin: 0.5rem 0; 
     }
 }
