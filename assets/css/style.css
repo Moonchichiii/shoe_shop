@@ -543,7 +543,7 @@ nav {
 .dropdown-content {
     display: none;
     position: relative;
-    margin-top: 1%;
+    margin-top: 2%;
     background-color: var(--header-bkg-color);
     max-width: fit-content;
     overflow: hidden;
